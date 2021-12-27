@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testsuite" verbose="1" >
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="com.automation.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Test Class">
+        <classes>
+            <class name="com.automation.testsuite.TestClass"></class>
+        </classes>
+    </test>
+    <test name="Create Account Test">
+        <classes>
+            <class name="com.automation.testsuite.CreateAccountTest"></class>
+        </classes>
+    </test>
+    <test name="Map Test">
+        <classes>
+            <class name="com.automation.testsuite.MapTest"></class>
+        </classes>
+    </test>
+</suite>
